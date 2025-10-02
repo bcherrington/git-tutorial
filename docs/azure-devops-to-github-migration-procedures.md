@@ -14,7 +14,7 @@
 2. **Personal Access Token (PAT)** for Azure DevOps
 
    * In Azure DevOps, click your profile → **Personal access tokens**.
-   * New Token → scopes: **Code: Read**.
+   * New Token → scopes: **Code: (read)**.
    * Copy it (you’ll paste into GitHub Importer).
 
 3. **GitHub destination**
@@ -59,12 +59,12 @@
 
 ## 5. Post-Migration Steps
 
-1. **Set default branch** to match your workflow (`main` or `staging` as per the Git Best Practices SOP in this repository).
+1. **Set default branch** to match your workflow (`main` as per the Git Best Practices SOP in this repository).
 2. **Protect branches** (Settings → Branches):
 
    * Require pull requests before merging.
    * Require at least 1 reviewer.
-   * Restrict merge strategies to **Squash merge**.
+   * Restrict merge strategies to **Squash merge** (as recommended in the Git Best Practices SOP).
 3. **Add PR template & CODEOWNERS** in `.github/`.
 4. **Reconnect Jira**:
 
@@ -85,6 +85,7 @@
 * Pull requests & review comments.
 * Azure branch policies (recreate them in GitHub).
 * Pipelines (if any exist, they will need to be recreated in GitHub Actions).
+* Work items/issues (these remain in Azure DevOps and need separate migration planning).
 
 ---
 
