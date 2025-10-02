@@ -225,7 +225,13 @@ Recommended extras:
 * **Why squash?** Cleaner history on `staging`/`main` while preserving full discussion in the PR. You can (and should) **edit the final message** at merge time. ([learn.microsoft.com][5])
 
 ---
+## Resources
 
+* **Pro Git Book (PDF)**: https://github.com/progit/progit2/releases/latest/progit.pdf
+* **Pro Git Book (HTML)**: https://git-scm.com/book/en/v2
+* **Learn Git Branching (interactive)**: https://learngitbranching.js.org/
+
+---
 ## References
 
 [1]: https://learn.microsoft.com/en-us/azure/devops/repos/git/pull-requests?view=azure-devops&utm_source=chatgpt.com "Create a pull request to review and merge code"
