@@ -1,0 +1,26 @@
+# CODEOWNERS file
+# This file defines code ownership for automatic review requests
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+# These owners will be requested for review when someone opens a pull request
+* @bcherrington
+
+# Documentation
+/docs/ @bcherrington
+*.md @bcherrington
+
+# GitHub workflows and automation
+/.github/workflows/ @bcherrington
+/.github/CODEOWNERS @bcherrington
+
+# Azure DevOps configuration
+/.azuredevops/ @bcherrington
+
+# Python source code
+*.py @bcherrington
+
+# Project configuration
+/pyproject.toml @bcherrington
+/.gitignore @bcherrington
+
