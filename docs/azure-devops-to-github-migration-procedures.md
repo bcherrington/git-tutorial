@@ -45,7 +45,7 @@
 * Enter the **new repository name** (default is same as Azure).
 * Choose **Owner** (your GitHub org or user).
 * Choose **Visibility**: Private (default recommended) or Public.
-* Click **Begin Import**.
+* Click **Create repository**.
 
 ---
 
@@ -59,7 +59,7 @@
 
 ## 5. Post-Migration Steps
 
-1. **Set default branch** to match your workflow (`main` or `staging` as per the Git Best Practices SOP).
+1. **Set default branch** to match your workflow (`main` or `staging` as per the Git Best Practices SOP in this repository).
 2. **Protect branches** (Settings → Branches):
 
    * Require pull requests before merging.
