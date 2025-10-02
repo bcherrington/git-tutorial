@@ -1,0 +1,32 @@
+# Commit template
+# ----------------
+
+<type>(scope): <short summary> (ABC-123)
+
+# <type>(scope): <summary> (ABC-123)
+# Example: feat(auth): add TOTP login (ABC-123)
+# Add '!' after type to indicate breaking change.
+# Example: feat(auth)!: add TOTP login (ABC-123)
+
+
+<body>
+
+# Body (what + why, wrapped at ~72 cols)
+# Explain context, motivation, design decisions.
+# Example:
+# Adds a 6-digit TOTP factor to augment password login.
+# Supports RFC 6238-compatible apps.
+
+
+<footer>
+<Jira Smart Commits>
+<References>
+<Breaking change note>
+
+# Footers (Smart Commits + references)
+# Add Jira Smart Commit commands here:
+# ABC-123 #comment Implemented verify endpoint
+# ABC-123 #time 1h
+# ABC-123 #transition In Review
+# Refs: ABC-123
+# BREAKING CHANGE: users must enroll TOTP device on next login
