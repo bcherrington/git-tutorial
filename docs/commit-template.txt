@@ -1,12 +1,15 @@
-# Commit template
+# Commit Message template
 # ----------------
 
 <type>(scope): <short summary> (ABC-123)
 
 # <type>(scope): <summary> (ABC-123)
-# Example: feat(auth): add TOTP login (ABC-123)
+# Type must be one of:
+#   feat | fix | docs | style | refactor | perf | test | chore | build | ci | revert
 # Add '!' after type to indicate breaking change.
-# Example: feat(auth)!: add TOTP login (ABC-123)
+# Examples:
+#   feat(auth): add TOTP login (ABC-123)
+#   fix(api/user)!: change 500→404 for missing user (ABC-456)
 
 
 <body>
@@ -24,7 +27,6 @@
 <Breaking change note>
 
 # Footers (Smart Commits + references)
-# Add Jira Smart Commit commands here:
 # ABC-123 #comment Implemented verify endpoint
 # ABC-123 #time 1h
 # ABC-123 #transition In Review

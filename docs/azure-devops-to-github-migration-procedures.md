@@ -13,9 +13,16 @@
 
 2. **Personal Access Token (PAT)** for Azure DevOps
 
-   * In Azure DevOps, click your profile → **Personal access tokens**.
-   * New Token → scopes: **Code: (read)**.
-   * Copy it (you’ll paste into GitHub Importer).
+   * In Azure DevOps, click your **profile icon** (top right) → **Personal access tokens**.
+   * Click **+ New Token**.
+   * Fill in the form:
+     * **Name**: e.g., "GitHub Migration"
+     * **Organization**: Select your Azure DevOps organization
+     * **Expiration**: Choose a date (recommend 30 days for migration purposes)
+     * **Scopes**: Click **Show all scopes** → expand **Code** → select **Read** (minimum required)
+   * Click **Create**.
+   * **Important**: Copy the token immediately and save it securely - you won't be able to see it again!
+   * You'll paste this token into GitHub Importer as the password.
 
 3. **GitHub destination**
 

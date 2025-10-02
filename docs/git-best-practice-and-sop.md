@@ -227,7 +227,7 @@ Recommended extras:
 ---
 ## Resources
 
-* **Pro Git Book (PDF)**: https://github.com/progit/progit2/releases/latest/progit.pdf 
+* **Pro Git Book (PDF)**: https://github.com/progit/progit2/releases/latest/progit.pdf
 * **Pro Git Book (HTML)**: https://git-scm.com/book/en/v2
 * **Learn Git Branching (interactive)**: https://learngitbranching.js.org/
 
