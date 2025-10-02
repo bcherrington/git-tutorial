@@ -16,9 +16,14 @@ ssh-keygen -t ed25519 -C "your.email@company.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
-# Copy public key to clipboard (macOS)
+# Copy public key to clipboard
+# macOS:
 pbcopy < ~/.ssh/id_ed25519.pub
-# Or display it to copy manually
+# Linux (with xclip):
+# xclip -selection clipboard < ~/.ssh/id_ed25519.pub
+# Windows (Git Bash):
+# clip < ~/.ssh/id_ed25519.pub
+# Or display it to copy manually:
 cat ~/.ssh/id_ed25519.pub
 
 # Add to GitHub: Settings → SSH and GPG keys → New SSH key
@@ -236,7 +241,12 @@ jobs:
 
       - name: Node - Install dependencies
         if: hashFiles('package.json') != ''
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Node - Lint
         if: hashFiles('package.json') != ''
@@ -380,7 +390,13 @@ If you use an AI tool that outputs findings to stdout, you can post them as a co
   with:
     script: |
       const fs = require('fs');
-      const reviewContent = fs.readFileSync('review.md', 'utf8');
+      let reviewContent;
+      try {
+        reviewContent = fs.readFileSync('review.md', 'utf8');
+      } catch (error) {
+        console.log('No review file found, skipping comment');
+        return;
+      }
 
       await github.rest.issues.createComment({
         owner: context.repo.owner,

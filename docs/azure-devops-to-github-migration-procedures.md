@@ -19,7 +19,7 @@
      * **Name**: e.g., "GitHub Migration"
      * **Organization**: Select your Azure DevOps organization
      * **Expiration**: Choose a date (recommend 30 days for migration purposes)
-     * **Scopes**: Click **Show all scopes** → expand **Code** → select **Read** (minimum required)
+     * **Scopes**: Click **Show all scopes** → expand **Code** → select **Read** and **Status** (recommended for complete migration)
    * Click **Create**.
    * **Important**: Copy the token immediately and save it securely - you won't be able to see it again!
    * You'll paste this token into GitHub Importer as the password.
