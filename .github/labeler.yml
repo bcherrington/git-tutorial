@@ -1,0 +1,73 @@
+# Auto-labeler configuration
+# Automatically adds labels to pull requests based on changed files
+# See: https://github.com/actions/labeler
+
+# Documentation changes
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - 'docs/**/*'
+      - '**/*.md'
+      - 'README.md'
+
+# GitHub workflows and actions
+github-actions:
+  - changed-files:
+    - any-glob-to-any-file: '.github/workflows/**/*'
+
+# GitHub configuration
+github-config:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.github/**/*'
+      - '!.github/workflows/**/*'
+
+# Azure DevOps configuration
+azure-devops:
+  - changed-files:
+    - any-glob-to-any-file: '.azuredevops/**/*'
+
+# Python source code
+python:
+  - changed-files:
+    - any-glob-to-any-file: '**/*.py'
+
+# Dependencies
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'pyproject.toml'
+      - 'requirements.txt'
+      - 'requirements-dev.txt'
+      - 'Pipfile'
+      - 'Pipfile.lock'
+      - 'poetry.lock'
+
+# Configuration files
+config:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '**/*.toml'
+      - '**/*.json'
+      - '.gitignore'
+      - '.editorconfig'
+
+# CI/CD
+ci-cd:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.github/workflows/**/*'
+      - 'azure-pipelines.yml'
+      - '.gitlab-ci.yml'
+
+# Templates
+templates:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*template*'
+      - '.github/ISSUE_TEMPLATE/**/*'
+      - '.github/pull_request_template.md'
+      - '.azuredevops/pull_request_template.md'
+
