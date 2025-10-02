@@ -59,7 +59,7 @@
 
 ## 5. Post-Migration Steps
 
-1. **Set default branch** to match your workflow (`main` or `staging` as per SOP).
+1. **Set default branch** to match your workflow (`main` or `staging` as per the Git Best Practices SOP).
 2. **Protect branches** (Settings → Branches):
 
    * Require pull requests before merging.
@@ -84,7 +84,7 @@
 
 * Pull requests & review comments.
 * Azure branch policies (recreate them in GitHub).
-* Pipelines (you said none are used).
+* Pipelines (if any exist, they will need to be recreated in GitHub Actions).
 
 ---
 
