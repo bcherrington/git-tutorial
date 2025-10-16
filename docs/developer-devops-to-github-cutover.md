@@ -56,14 +56,6 @@ If Azure still needs updates, push explicitly:
 git push origin main     # GitHub
 git push devops main     # Azure (temporary)
 ```
-
-*(Optional dual-push, not recommended long-term)*
-
-```bash
-git remote set-url --add --push origin https://github.com/modena-aec/OneSync.git
-git remote set-url --add --push origin https://dev.azure.com/Modena-AEC/_git/OneSync
-```
-
 ---
 
 ## 4. Final Cut-over (when Azure shuts down)
